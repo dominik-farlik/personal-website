@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="cs" data-theme="auto">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jméno Příjmení – Portfolio & CV</title>
+  <meta name="description" content="Osobní web – informace o mně, životopis, projekty a kontakty." />
+  <meta property="og:title" content="Jméno Příjmení – Portfolio & CV" />
+  <meta property="og:description" content="Osobní web – informace o mně, životopis, projekty a kontakty." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/og-image.jpg" />
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <!-- Font (volitelné) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0b0c0f;          /* tmavé pozadí */
+      --bg-soft:#0f1117;      /* karty/sekce */
+      --text:#e5e7eb;         /* primární text */
+      --muted:#9ca3af;        /* sekundární text */
+      --brand:#0ea5e9;        /* akcent */
+      --border:#1f2937;       /* bordery */
+      --card:#11131a;         /* card bg */
+      --shadow: 0 10px 30px rgba(2,6,23,.35);
+      --radius: 16px;
+      --container: 1080px;
+    }
+    [data-theme="light"]:root{
+      --bg:#f8fafc; --bg-soft:#ffffff; --card:#ffffff; --text:#0f172a; --muted:#475569; --border:#e5e7eb; --shadow:0 10px 30px rgba(2,6,23,.08);
+    }
+    html,body{height:100%}
+    body{ margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--text); line-height:1.6; }
+    .container{ max-width:var(--container); margin-inline:auto; padding: 0 20px; }
+    header{ position:sticky; top:0; backdrop-filter:saturate(180%) blur(12px); background-color: color-mix(in oklab, var(--bg), transparent 40%); border-bottom:1px solid var(--border); z-index:50; }
+    nav{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 0; }
+    .brand{ display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.3px; }
+    .brand .logo{ width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg, var(--brand), #22d3ee); display:grid; place-items:center; color:white; font-weight:800; box-shadow: var(--shadow); }
+    .navlinks{ display:flex; gap:18px; flex-wrap:wrap; }
+    .navlinks a{ color:var(--muted); text-decoration:none; font-weight:500; }
+    .navlinks a:hover{ color:var(--text); }
+    .btn{ appearance:none; border:1px solid var(--border); background:var(--bg-soft); color:var(--text); padding:10px 14px; border-radius:12px; cursor:pointer; font-weight:600; text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
+    .btn:hover{ border-color: color-mix(in oklab, var(--brand), var(--border)); box-shadow: var(--shadow); }
+    .btn.primary{ background:linear-gradient(135deg, var(--brand), #22d3ee); color:#001018; border:none; }
+
+    .hero{ padding:72px 0 32px; display:grid; gap:18px; }
+    .hero h1{ font-size: clamp(28px, 4vw, 44px); line-height:1.1; margin:0; }
+    .hero p{ color:var(--muted); max-width:70ch; }
+    .tags{ display:flex; gap:8px; flex-wrap:wrap; }
+    .tag{ border:1px solid var(--border); color:var(--muted); padding:6px 10px; border-radius:999px; font-size:14px; }
+
+    section{ padding: 42px 0; }
+    .section-title{ font-size:22px; margin:0 0 16px; }
+    .grid{ display:grid; gap:16px; }
+    @media (min-width: 720px){ .grid.cols-2{ grid-template-columns: 1fr 1fr; } .grid.cols-3{ grid-template-columns: repeat(3, 1fr); } }
+
+    .card{ background:var(--card); border:1px solid var(--border); border-radius: var(--radius); padding:18px; box-shadow: var(--shadow); }
+    .card h3{ margin:0 0 6px; font-size:18px; }
+    .muted{ color:var(--muted); }
+
+    .about{ display:grid; gap:16px; }
+
+    .timeline{ position:relative; padding-left:18px; }
+    .timeline:before{ content:""; position:absolute; left:6px; top:0; bottom:0; width:2px; background:var(--border); }
+    .timeline-item{ position:relative; padding-left:14px; margin:14px 0; }
+    .timeline-item:before{ content:""; position:absolute; left:-2px; top:.45rem; width:10px; height:10px; border-radius:50%; background:var(--brand); box-shadow:0 0 0 3px color-mix(in oklab, var(--brand), transparent 70%); }
+
+    .projects .thumb{ aspect-ratio:16/9; border-radius:12px; background:linear-gradient(135deg, color-mix(in oklab, var(--brand), #000 30%), #111); border:1px solid var(--border); margin-bottom:10px; display:grid; place-items:center; font-weight:700; }
+
+    .skills{ display:flex; gap:8px; flex-wrap:wrap; }
+
+    .contact{ display:grid; gap:10px; }
+    .contact a{ color:var(--text); text-decoration:none; }
+    .contact .row{ display:flex; gap:10px; flex-wrap:wrap; }
+
+    footer{ padding:36px 0 56px; color:var(--muted); border-top:1px solid var(--border); }
+
+    .theme-toggle{ background:transparent; border:1px solid var(--border); padding:8px 10px; border-radius:10px; cursor:pointer; }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    .skip{ position:absolute; left:-9999px; }
+    .skip:focus{ left:10px; top:10px; background:var(--brand); color:#000; padding:10px; border-radius:8px; z-index:999; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Přeskočit na obsah</a>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="logo" aria-hidden="true">JP</div>
+          <span>Jméno Příjmení</span>
+        </div>
+        <div class="navlinks" role="navigation" aria-label="Primární">
+          <a href="#o-mne">O mně</a>
+          <a href="#zivotopis">Životopis</a>
+          <a href="#projekty">Projekty</a>
+          <a href="#kontakt">Kontakt</a>
+          <button class="theme-toggle" id="themeBtn" aria-label="Přepnout téma">🌓</button>
+          <a class="btn primary" href="./cv.pdf" download>Stáhnout CV</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <h1>Ahoj, jsem <span style="color:var(--brand)">Jméno</span> — dělám <u>věc X</u> a hledám spolupráci na <u>věci Y</u>.</h1>
+      <p>Krátké shrnutí na 1–2 věty, co děláš a pro koho. Např. „Jsem datový analytik na volné noze, pomáhám firmám převést chaos v datech na rozhodnutí.“</p>
+      <div class="tags">
+        <span class="tag">Lokalita · Remote</span>
+        <span class="tag">Dostupnost: 10h / týden</span>
+        <span class="tag">Otevřen spolupráci</span>
+      </div>
+      <div class="row" style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
+        <a class="btn primary" href="#kontakt">Ozvi se</a>
+        <a class="btn" href="#projekty">Zobrazit projekty</a>
+      </div>
+    </section>
+
+    <section id="o-mne" class="about grid cols-2">
+      <div class="card">
+        <h2 class="section-title">O mně</h2>
+        <p>Krátký bio odstavec. Čím se zabýváš, jaký máš background, jak pracuješ. Bez zbytečných floskulí – konkrétně a lidsky.</p>
+        <p class="muted">Preferované technologie / nástroje: Python, Pandas, SQL, Docker, GCP</p>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Rychlá fakta</h2>
+        <ul class="muted">
+          <li>🗺️ Praha, Česko</li>
+          <li>🎓 Mgr., Přírodovědecká fakulta</li>
+          <li>🧪 Oblasti: data science, GIS</li>
+          <li>🏔️ Mimo práci: bouldering, foto</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="zivotopis" class="grid cols-2">
+      <div class="card">
+        <h2 class="section-title">Praxe</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Firma A · <span class="muted">Datový analytik</span></h3>
+            <div class="muted">2023 — současnost</div>
+            <p>Hlavní odpovědnosti a dopad (čísla, metriky, např. „zkrácení doby zpracování o 35 %“).</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Firma B · <span class="muted">Stážista</span></h3>
+            <div class="muted">2022 — 2023</div>
+            <p>Co ses naučil, konkrétní projekty.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Vzdělání</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Univerzita · <span class="muted">Obor</span></h3>
+            <div class="muted">2019 — 2024</div>
+            <p>Téma diplomky, relevantní kurzy.</p>
+          </div>
+        </div>
+        <h3 style="margin-top:18px">Certifikace</h3>
+        <ul class="muted">
+          <li>Google Data Analytics</li>
+          <li>Azure Fundamentals</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projekty">
+      <h2 class="section-title">Vybrané projekty</h2>
+      <div class="grid cols-3 projects">
+        <article class="card">
+          <div class="thumb">Projekt #1</div>
+          <h3>Název projektu</h3>
+          <p class="muted">1–2 věty: problém → řešení → výsledek. <a href="#">Case study</a> · <a href="#">GitHub</a></p>
+        </article>
+        <article class="card">
+          <div class="thumb">Projekt #2</div>
+          <h3>Název projektu</h3>
+          <p class="muted">Krátké shrnutí + odkaz.</p>
+        </article>
+        <article class="card">
+          <div class="thumb">Projekt #3</div>
+          <h3>Název projektu</h3>
+          <p class="muted">Krátké shrnutí + odkaz.</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Dovednosti</h2>
+      <div class="skills">
+        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">SQL</span><span class="tag">Docker</span><span class="tag">GIS</span><span class="tag">ETL</span>
+      </div>
+    </section>
+
+    <section id="kontakt" class="card">
+      <h2 class="section-title">Kontakt</h2>
+      <div class="contact">
+        <div class="row">
+          <a class="btn" href="mailto:you@example.com">📧 you@example.com</a>
+          <a class="btn" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">in/your-handle</a>
+          <a class="btn" href="https://github.com/your-handle" target="_blank" rel="noopener">github.com/your-handle</a>
+        </div>
+        <p class="muted">Preferuji e‑mail. Odpovídám do 24 h.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div>© <span id="year"></span> Jméno Příjmení · <a href="./cv.pdf">CV</a></div>
+  </footer>
+
+  <script>
+    // Rok ve footeru
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Téma (dark / light) s uložením do localStorage
+    const root = document.documentElement;
+    const btn = document.getElementById('themeBtn');
+    const saved = localStorage.getItem('theme');
+    if(saved){ root.setAttribute('data-theme', saved); }
+    btn?.addEventListener('click', () => {
+      const cur = root.getAttribute('data-theme');
+      const next = cur === 'light' ? 'dark' : cur === 'dark' ? 'auto' : 'light';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+    // Pokud je "auto", respektovat prefer-color-scheme (CSS řeší barvy)
+  </script>
+
+  <!-- Strukturovaná data (upravit jméno, url a social odkazy) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jméno Příjmení",
+    "url": "https://moje-domena.cz",
+    "sameAs": [
+      "https://www.linkedin.com/in/your-handle",
+      "https://github.com/your-handle"
+    ],
+    "jobTitle": "Datový analytik",
+    "worksFor": { "@type": "Organization", "name": "Freelance" }
+  }
+  </script>
+</body>
+</html>
