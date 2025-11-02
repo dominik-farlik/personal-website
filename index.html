@@ -131,7 +131,7 @@
     </section>
 
     <section id="kontakt" class="card">
-      <h2 class="section-title">Contakt</h2>
+      <h2 class="section-title">Contact</h2>
       <div class="contact">
         <div class="row">
           <a class="btn" href="mailto:dominik@farlik.cz">📧 dominik@farlik.cz</a>
@@ -187,6 +187,16 @@
 
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => navLinks.classList.remove('show'));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (
+              navLinks.classList.contains('show') &&
+              !navLinks.contains(e.target) &&
+              !menuToggle.contains(e.target)
+      ) {
+        navLinks.classList.remove('show');
+      }
     });
   </script>
 
