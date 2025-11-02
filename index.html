@@ -29,8 +29,8 @@
           <a href="#zivotopis">CV</a>
           <a href="#projekty">Projects</a>
           <a href="#kontakt">Contact</a>
-          <button class="theme-toggle" id="themeBtn" aria-label="Přepnout téma">🌓</button>
           <a class="btn primary" href="./cv.pdf" download>Downolad CV</a>
+          <button class="theme-toggle" id="themeBtn" aria-label="Přepnout téma">🌓</button>
         </div>
       </nav>
     </div>
@@ -38,16 +38,16 @@
 
   <main id="main" class="container">
     <section class="hero">
-      <h1>Hi, I'm <span style="color:var(--brand)">Dominik</span> — IT student that enjoys <u>making software</u> and other things around IT and I'm looking for <u>new experiences</u> in job enviroment.</h1>
+      <h1>Hi, I'm <span style="color:var(--brand)">Dominik</span> — IT student that enjoys <u>making software</u> and other things around IT. I'm looking for <u>new experiences</u> in job enviroment.</h1>
       <p>Krátké shrnutí na 1–2 věty, co děláš a pro koho. Např. „Jsem datový analytik na volné noze, pomáhám firmám převést chaos v datech na rozhodnutí.“</p>
       <div class="tags">
-        <span class="tag">Lokalita · Remote</span>
-        <span class="tag">Dostupnost: 10h / týden</span>
-        <span class="tag">Otevřen spolupráci</span>
+        <span class="tag">Brno / Remote</span>
+        <span class="tag">Available: 20h / week</span>
+        <span class="tag">Open to work</span>
       </div>
       <div class="row" style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
-        <a class="btn primary" href="#kontakt">Ozvi se</a>
-        <a class="btn" href="#projekty">Zobrazit projekty</a>
+        <a class="btn primary" href="#kontakt">Contact me</a>
+        <a class="btn" href="#projekty">My projects</a>
       </div>
     </section>
 
@@ -123,21 +123,21 @@
     </section>
 
     <section>
-      <h2 class="section-title">Dovednosti</h2>
+      <h2 class="section-title">Skills</h2>
       <div class="skills">
-        <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">SQL</span><span class="tag">Docker</span><span class="tag">GIS</span><span class="tag">ETL</span>
+        <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQL</span><span class="tag">Docker</span><span class="tag">Linux</span><span class="tag">React</span>
       </div>
     </section>
 
     <section id="kontakt" class="card">
-      <h2 class="section-title">Kontakt</h2>
+      <h2 class="section-title">Contakt</h2>
       <div class="contact">
         <div class="row">
           <a class="btn" href="mailto:dominik@farlik.cz">📧 dominik@farlik.cz</a>
           <a class="btn" href="https://www.linkedin.com/in/dominik-farlik" target="_blank" rel="noopener">in/dominik-farlik</a>
           <a class="btn" href="https://github.com/dominik-farlik" target="_blank" rel="noopener">github.com/dominik-farlik</a>
         </div>
-        <p class="muted">Preferuji e‑mail. Odpovídám do 24 h.</p>
+        <p class="muted">Prefers e‑mail communication. Respond to 24 h.</p>
       </div>
     </section>
   </main>
@@ -160,21 +160,19 @@
       root.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
     });
-    // Pokud je "auto", respektovat prefer-color-scheme (CSS řeší barvy)
   </script>
 
-  <!-- Strukturovaná data (upravit jméno, url a social odkazy) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Jméno Příjmení",
-    "url": "https://moje-domena.cz",
+    "name": "Dominik Farlík",
+    "url": "https://farlik.cz",
     "sameAs": [
-      "https://www.linkedin.com/in/your-handle",
-      "https://github.com/your-handle"
+      "https://www.linkedin.com/in/dominik-farlik",
+      "https://github.com/dominik-farlik"
     ],
-    "jobTitle": "Datový analytik",
+    "jobTitle": "Software Developer",
     "worksFor": { "@type": "Organization", "name": "Freelance" }
   }
   </script>
