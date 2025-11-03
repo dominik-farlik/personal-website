@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dominik Farlík – Portfolio & CV</title>
-  <meta name="description" content="Osobní web – informace o mně, životopis, projekty a kontakty." />
+  <meta name="description" content="Osobní web – informace o mně, životopis, projects a contacty." />
   <meta property="og:title" content="Dominik Farlík – Portfolio & CV" />
-  <meta property="og:description" content="Osobní web – informace o mně, životopis, projekty a kontakty." />
+  <meta property="og:description" content="Osobní web – informace o mně, životopis, projects a contacty." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/og-image.jpg" />
   <meta name="theme-color" content="#0ea5e9" />
@@ -26,10 +26,10 @@
         </div>
         <button id="menuToggle" class="menu-toggle" aria-label="Otevřít menu">☰</button>
         <div id="navlinks" class="navlinks" role="navigation" aria-label="Primární">
-          <a href="#o-mne">About</a>
-          <a href="#zivotopis">CV</a>
-          <a href="#projekty">Projects</a>
-          <a href="#kontakt">Contact</a>
+          <a href="#about">About</a>
+          <a href="#cv">CV</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
           <a class="btn primary" href="./cv.pdf" download>Downolad CV</a>
         </div>
         <button class="theme-toggle" id="themeBtn" aria-label="Přepnout téma">🌓</button>
@@ -40,85 +40,92 @@
   <main id="main" class="container">
     <section class="hero">
       <h1>Hi, I'm <span style="color:var(--brand)">Dominik</span> — an IT student passionate about <u>software development</u> and technology, looking to gain <u>new experiences</u> in a professional environment.</h1>
-      <p>I mostly work on backend development in Python and enjoy managing and working with data. I spent a year developing software for different kinds of projects in a company setting, and now I’m finishing a game built with Godot.</p>
+      <p>I mostly work on backend development in Python and enjoy managing and working with data. I spent a year developing software for different kinds of projects in a company setting, and currently finishing a game built with Godot.</p>
       <div class="tags">
         <span class="tag">Brno / Remote</span>
         <span class="tag">Available: 20h / week</span>
         <span class="tag">Open to work</span>
       </div>
       <div class="row" style="display:flex; gap:10px; flex-wrap:wrap; margin-top:8px;">
-        <a class="btn primary" href="#kontakt">Contact me</a>
-        <a class="btn" href="#projekty">My projects</a>
+        <a class="btn primary" href="#contact">Contact me</a>
+        <a class="btn" href="#projects">My projects</a>
       </div>
     </section>
 
-    <section id="o-mne" class="about grid cols-2">
+    <section id="about" class="about grid cols-2">
       <div class="card">
         <h2 class="section-title">About</h2>
-        <p>My studies gave me experience in <b>system administration, computer networks, virtualization, and database management</b>. I gained hands-on experience with technologies across different layers of software systems — from managing servers and configuring networks to designing database schemas and improving performance. This background helps me understand how various components in modern infrastructure work together. I’ve also worked with programming languages like C++ and Java, which helped me develop structured thinking and learn the basics of object-oriented design. These experiences shaped the way I approach software architecture and problem-solving in more complex projects.</p>
+        <p>My studies gave me knowledge in <b>system administration, computer networks, virtualization, and database management</b>. I gained hands-on experience with technologies across different layers of software systems — from managing servers and configuring networks to designing database schemas and improving performance. I’ve also worked with programming languages like C++ and Java, which helped me develop structured thinking and learn the basics of object-oriented design. These experiences shaped the way I approach software architecture and problem-solving in more complex projects.</p>
       </div>
       <div class="card">
         <h2 class="section-title">Quick info</h2>
         <ul class="muted">
           <li>🗺️ Brno, Czechia</li>
           <li>🎓 Bc., Faculty of Business and Economics - Department of Informatics</li>
-          <li>🎓 (Currently) Ing., Faculty of Business and Economics—Department of Informatics</li>
-          <li>🖥️ Software development, OS administration, networks</li>
-          <li>🏔️ Mimo práci: bouldering, foto</li>
+          <li>🎓 Ing., Faculty of Business and Economics—Department of Informatics <i>(ongoing)</i></li>
+          <li>🖥️ Software development, OS administration, Networks, Virtualization</li>
+          <li>🌄 Hobbies: Tech, Travel, Sport, Quiz, Games</li>
         </ul>
       </div>
     </section>
 
-    <section id="zivotopis" class="grid cols-2">
+    <section id="cv" class="grid cols-2">
       <div class="card">
-        <h2 class="section-title">Praxe</h2>
+        <h2 class="section-title">Job Experience</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <h3>Firma A · <span class="muted">Datový analytik</span></h3>
-            <div class="muted">2023 — současnost</div>
-            <p>Hlavní odpovědnosti a dopad (čísla, metriky, např. „zkrácení doby zpracování o 35 %“).</p>
+            <h3>Elekon s.r.o. · <span class="muted">Software developer</span></h3>
+            <div class="muted">2024</div>
+            <p>Implemented software for station information displays and system integration across various communication protocols. Developed interfaces for hardware sensors and I/O modules to ensure reliable operation of connected devices.</p>
           </div>
           <div class="timeline-item">
-            <h3>Firma B · <span class="muted">Stážista</span></h3>
-            <div class="muted">2022 — 2023</div>
-            <p>Co ses naučil, konkrétní projekty.</p>
+            <h3>Troglodyte Studio · <span class="muted">Game developer</span></h3>
+            <div class="muted">2025</div>
+            <p>Developed a card-based game in Godot Engine combining space exploration, survival, and strategy. Designed gameplay systems for ship building, combat, and planetary colonization, focusing on balance and player progression.</p>
           </div>
         </div>
       </div>
       <div class="card">
-        <h2 class="section-title">Vzdělání</h2>
+        <h2 class="section-title">Education</h2>
         <div class="timeline">
           <div class="timeline-item">
-            <h3>Univerzita · <span class="muted">Obor</span></h3>
-            <div class="muted">2019 — 2024</div>
-            <p>Téma diplomky, relevantní kurzy.</p>
+            <h3>Mendel University · <span class="muted">Administration IS/ICT</span></h3>
+            <div class="muted">2022 — 2025</div>
+            <p>Bachelor's thesis: <a href="https://github.com/dominik-farlik/BP_RM" style="color: var(--brand)">Educational application</a> for automated theorem proving in propositional logic</p>
+          </div>
+          <div class="timeline-item">
+            <h3>Mendel University · <span class="muted">Open Informatics-Data analysis and machine learning</span></h3>
+            <div class="muted">2025 — 2027</div>
+            <p class="muted"><i>ongoing</i></p>
           </div>
         </div>
-        <h3 style="margin-top:18px">Certifikace</h3>
-        <ul class="muted">
-          <li>Google Data Analytics</li>
-          <li>Azure Fundamentals</li>
-        </ul>
       </div>
     </section>
 
-    <section id="projekty">
-      <h2 class="section-title">Vybrané projekty</h2>
+    <section id="projects">
+      <h2 class="section-title">My Projects</h2>
       <div class="grid cols-3 projects">
         <article class="card">
-          <div class="thumb">Projekt #1</div>
-          <h3>Název projektu</h3>
-          <p class="muted">1–2 věty: problém → řešení → výsledek. <a href="#">Case study</a> · <a href="#">GitHub</a></p>
+          <div class="thumb"><img src="project-thesis.png" alt="project-1-image"></div>
+          <h3>Application for automated theorem proving</h3>
+          <p class="muted">An educational app designed to help students better understand and practice the resolution method in propositional logic.</p>
+          <div><span class="tag">Python</span> <span class="tag">MySQL</span> <span class="tag">React</span></div>
+          <p><a href="https://github.com/dominik-farlik/BP_RM" style="color: var(--brand)">GitHub</a></p>
         </article>
         <article class="card">
-          <div class="thumb">Projekt #2</div>
-          <h3>Název projektu</h3>
-          <p class="muted">Krátké shrnutí + odkaz.</p>
+          <div class="thumb"><img src="project-happies.png" alt="project-2-image"></div>
+          <h3>Happies Doomsday</h3>
+          <p class="muted">Space exploration card game, made with Godot.</p>
+          <div><span class="tag">Godot</span></div>
+          <p><a href="https://github.com/dominik-farlik/Happies-Doomsday" style="color: var(--brand)">GitHub</a> · <i class="muted">release soon</i></p>
         </article>
         <article class="card">
-          <div class="thumb">Projekt #3</div>
-          <h3>Název projektu</h3>
-          <p class="muted">Krátké shrnutí + odkaz.</p>
+          <div class="thumb"><img src="project-nchls.png" alt="project-1-image"></div>
+          <h3>Chemical Substance Management System</h3>
+          <p class="muted">A web app for managing and storing data on chemical substances in hospitals.</p>
+          <p class="muted"></p>
+          <div><span class="tag">Python</span> <span class="tag">Mongo</span> <span class="tag">React</span></div>
+          <p><a href="https://github.com/dominik-farlik/NCHLS-react" style="color: var(--brand)">GitHub</a> · <i class="muted">in progress</i></p>
         </article>
       </div>
     </section>
@@ -130,7 +137,7 @@
       </div>
     </section>
 
-    <section id="kontakt" class="card">
+    <section id="contact" class="card">
       <h2 class="section-title">Contact</h2>
       <div class="contact">
         <div class="row">

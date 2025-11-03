@@ -137,7 +137,7 @@ nav {
 }
 
 .hero h1 {
-    font-size: clamp(28px, 4vw, 44px);
+    font-size: clamp(28px, 4vw, 38px);
     line-height: 1.1;
     margin: 0;
 }
@@ -263,6 +263,10 @@ section {
     color: var(--muted);
 }
 
+li {
+    padding: 5px;
+}
+
 .about {
     display: grid;
     gap: 16px;
@@ -311,6 +315,19 @@ section {
     display: grid;
     place-items: center;
     font-weight: 700;
+}
+
+.projects .thumb img {
+    max-width: 100%;
+    border-radius: 12px;
+    display: block;
+    height: auto;
+    transition: transform .3s ease;
+    transform-origin: center;
+}
+
+.projects .thumb img:hover {
+    transform: scale(1.8);
 }
 
 .skills {
