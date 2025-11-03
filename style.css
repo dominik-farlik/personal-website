@@ -147,6 +147,20 @@ nav {
     max-width: 70ch;
 }
 
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile img {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 25%;
+    margin-right: 50px;
+}
+
 .tags {
     display: flex;
     gap: 8px;
@@ -242,6 +256,16 @@ section {
     .navlinks .btn.primary {
         width: 100%;
         justify-content: center;
+    }
+
+    .profile {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .profile img {
+        margin-bottom: 20px;
+        margin-right: 0;
     }
 }
 
