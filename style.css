@@ -154,7 +154,7 @@ nav {
     justify-content: space-around;
 }
 
-.profile img {
+.profile-picture {
     max-height: 200px;
     max-width: 200px;
     border-radius: 25%;
