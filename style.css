@@ -263,9 +263,13 @@ section {
         align-content: center;
     }
 
-    .profile img {
+    .profile-picture {
         margin-bottom: 20px;
         margin-right: 0;
+    }
+
+    .hero {
+        padding: 36px 0 16px;
     }
 }
 
